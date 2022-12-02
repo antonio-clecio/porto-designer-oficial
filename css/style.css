@@ -322,7 +322,7 @@ body.menu-expanded button {
 
 #about img {
   display: block;
-  max-width: 40rem;
+  width: 100%;
   padding: 4rem;
   background: linear-gradient(180deg, #242238 0%, #151221 100%);
   border-radius: .6rem;
