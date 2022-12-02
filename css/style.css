@@ -390,7 +390,7 @@ cursor: pointer;
 }
 
 #contact img {
-  max-width: 50rem;
+  max-width: 100%;
   padding: 2rem;
   margin-top: 8rem;
 }
