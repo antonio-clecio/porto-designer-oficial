@@ -320,6 +320,59 @@ body.menu-expanded button {
   border-radius: .6rem;
 }
 
+#works .arguments {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 6rem;
+}
+
+#works .arguments .argument {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+#works .arguments .argument + .argument {
+  border-left: 1px solid var(--primary-text-color);
+}
+
+#works .arguments .argument p {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 176%;
+  margin-left: 1.5rem;
+}
+
+#works .works-btn {
+  margin-top: 6rem;
+}
+
+#works a {
+  background: var(--primary-color);
+  border: none;
+  width: 28.3rem;
+  height: 5.6rem;
+  padding: 12px 32px 16px;
+  border-radius: 0.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--primary-text-color);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  transition: all .3s ease-in-out;
+}
+
+#works a:hover {
+  filter: brightness(1.2);
+}
+
 /*=== ABOUT ===========================================*/
 #about {
   text-align: left;

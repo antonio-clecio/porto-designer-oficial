@@ -46,6 +46,8 @@ ScrollReveal({
 #works h4,
 #works h2,
 #works .card,
+#works .arguments,
+#works .works-btn,
 #about,
 #about h4,
 #about h2,
