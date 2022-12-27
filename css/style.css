@@ -323,20 +323,24 @@ body.menu-expanded button {
 #works .arguments {
   width: 100%;
   display: flex;
-  flex-wrap: nowrap;
+  flex-direction: column;
+  /* flex-wrap: nowrap; */
   margin-top: 6rem;
+  gap: 2rem;
 }
 
 #works .arguments .argument {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-grow: 1;
+  gap: 1rem;
+  /* flex-grow: 1; */
 }
 
-#works .arguments .argument + .argument {
+/* #works .arguments .argument + .argument {
   border-left: 1px solid var(--primary-text-color);
-}
+} */
 
 #works .arguments .argument p {
   font-size: 1.6rem;
@@ -723,6 +727,20 @@ footer .social-links {
   #works .card img:hover {
     transform: translate(-3%, 3%) scale(1.2);
   }
+
+  #works .arguments {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  #works .arguments .argument {
+    flex-direction: row;
+    flex-grow: 1;
+  }
+
+  #works .arguments .argument + .argument {
+  border-left: 1px solid var(--primary-text-color);
+}
 
   /*    ABOUT    */
   #about .wrapper {
