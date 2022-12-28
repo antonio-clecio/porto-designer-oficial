@@ -66,8 +66,19 @@ footer .social-links`);
 
 /*=== FORM ===========================================*/
 
+const buttonSubmit = document.getElementById('btn-submit');
+
+const addLoading = () => {
+  buttonSubmit.innerHTML = '<img src="./img/loading.png" class="loading" />';
+}
+
+const removeLoading = () => {
+  buttonSubmit.innerHTML = 'Vamos conversar';
+}
+
 const handleSubmit = (event) => {
   event.preventDefault();
+  addLoading();
 
   const name = document.querySelector('input[name=name]').value;
   const email = document.querySelector('input[name=email]').value;
@@ -82,7 +93,7 @@ const handleSubmit = (event) => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({ name, email, phone, message }),
-  });
+  }).then(() => removeLoading());
 }
 
 document.querySelector('form').addEventListener('submit', handleSubmit);
