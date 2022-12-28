@@ -63,3 +63,26 @@ footer,
 footer h2,
 footer p,
 footer .social-links`);
+
+/*=== FORM ===========================================*/
+
+const handleSubmit = (event) => {
+  event.preventDefault();
+
+  const name = document.querySelector('input[name=name]').value;
+  const email = document.querySelector('input[name=email]').value;
+  const phone = document.querySelector('input[name=phone]').value;
+  const message = document.querySelector('textarea[name=message]').value;
+
+  fetch('https://api.sheetmonkey.io/form/epWWT6t7RXCzM8r9GaVbCU', {
+    
+    method: 'post',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ name, email, phone, message }),
+  });
+}
+
+document.querySelector('form').addEventListener('submit', handleSubmit);
