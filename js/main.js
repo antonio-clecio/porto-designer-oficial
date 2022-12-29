@@ -30,6 +30,10 @@ function closeMenu() {
   document.body.classList.remove("menu-expanded");
 }
 
+function myForm() {
+  document.getElementById("myForm").reset();
+}
+
 ScrollReveal({
   origin: "top",
   distance: "30px",
@@ -85,7 +89,7 @@ const handleSubmit = (event) => {
   const phone = document.querySelector('input[name=phone]').value;
   const message = document.querySelector('textarea[name=message]').value;
 
-  fetch('https://api.sheetmonkey.io/form/epWWT6t7RXCzM8r9GaVbCU', {
+  fetch('https://api.sheetmonkey.io/form/5tbfWKfMtfoCts2Xp8JoM4', {
     
     method: 'post',
     headers: {
@@ -93,7 +97,7 @@ const handleSubmit = (event) => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({ name, email, phone, message }),
-  }).then(() => alert('Dados enviados com sucesso!')).then(() => removeLoading());
+  }).then(() => alert('DADOS ENVIADOS COM SUCESSO! ✅                                                Em breve entraremos em contato para convesarmos! OBRIGADO! 😉')).then(() => removeLoading()).then(() => myForm());
 }
 
 document.querySelector('form').addEventListener('submit', handleSubmit);
