@@ -93,7 +93,7 @@ const handleSubmit = (event) => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({ name, email, phone, message }),
-  }).then(() => removeLoading());
+  }).then(() => alert('Dados enviados com sucesso!')).then(() => removeLoading());
 }
 
 document.querySelector('form').addEventListener('submit', handleSubmit);
